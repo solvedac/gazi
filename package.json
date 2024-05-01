@@ -2,6 +2,10 @@
   "name": "workspace",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ext:dev": "pnpm -F=@with-gazi/extension run dev",
+    "ext:dev:firefox": "pnpm -F=@with-gazi/extension run dev:firefox"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.1"
   }
 }
