@@ -24,19 +24,19 @@ sequenceDiagram
     Extension->>Receiver: Request Gazi Manifest<br />for Update Check
     Receiver->>Extension: Respond with new Manifest<br />or 204 No Content
 
-    alt if manifest has update
+    opt if manifest has update
         Extension->>User: Notify Update
         User->>Extension: Accept Update<br /> and Return to Start
     end
 
-    alt if user not accepted<br />permission
+    opt if user not accepted<br />permission
         Extension->>User: Permission Confirmation
         User->>Extension: Permission Confirmed<br />or Enable Cancelled
     end
 
     Extension->>Receiver: Request Login<br />with Nickname & Public Key
 
-    alt if receiver has login challenge
+    opt if receiver has login challenge
         Note over Receiver: Print Login Challenge Code
         Receiver->>Extension: Login Challenge Required
         Extension->>User: Show Challenge Code Input
