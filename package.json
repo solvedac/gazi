@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "ext:dev": "pnpm -F=@with-gazi/extension run dev",
-    "ext:dev:firefox": "pnpm -F=@with-gazi/extension run dev:firefox"
+    "ext:dev:firefox": "pnpm -F=@with-gazi/extension run dev:firefox",
+    "ext:zip": "pnpm -F=@with-gazi/extension run zip && pnpm -F=@with-gazi/extension run zip:firefox"
   },
   "devDependencies": {
     "prettier": "^3.2.5"
